@@ -3,7 +3,7 @@ package cmu.rrg.pi.model;
 import java.util.ArrayList;
 
 /**
- * Created by Yang on 4/30/16.
+ * Created by Rui on 4/30/16.
  */
 public class MeetupFactory {
     private ArrayList<Meetup> meetups;
