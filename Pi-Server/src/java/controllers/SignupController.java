@@ -17,7 +17,6 @@ import utils.DatabaseIO;
 
 /**
  *
- * @author Yang
  * 
  * User register API
  */
