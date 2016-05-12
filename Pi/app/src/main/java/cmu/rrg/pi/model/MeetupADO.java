@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import cmu.rrg.pi.service.LocationService;
 
 /**
- * Created by Yang on 4/30/16.
+ * Created by Rui on 4/30/16.
  */
 public class MeetupADO {
     private static String site = "http://128.237.212.2:8080/Pi-Server";
