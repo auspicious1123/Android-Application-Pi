@@ -17,8 +17,6 @@ import utils.DatabaseIO;
 
 /**
  *
- * @author Yang
- *
  * get Meetup list of certain category
  */
 public class MeetupsController extends HttpServlet {
