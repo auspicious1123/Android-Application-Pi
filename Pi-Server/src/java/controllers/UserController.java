@@ -17,8 +17,6 @@ import utils.DatabaseIO;
 
 /**
  *
- * @author Yang
- * 
  * Get user profile API
  */
 public class UserController extends HttpServlet {
