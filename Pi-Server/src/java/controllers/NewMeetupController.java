@@ -21,8 +21,6 @@ import utils.DatabaseIO;
 
 /**
  *
- * @author Yang
- *
  * create a new Meetup
  */
 public class NewMeetupController extends HttpServlet {
