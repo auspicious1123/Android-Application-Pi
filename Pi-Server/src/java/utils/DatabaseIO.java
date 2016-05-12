@@ -11,10 +11,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Yang
- */
 public class DatabaseIO {
     private static final String URL = "jdbc:mysql://localhost:3306";
     private static final String USER_NAME = "root";
