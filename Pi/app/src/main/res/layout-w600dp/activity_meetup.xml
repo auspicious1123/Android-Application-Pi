@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="cmu.rrg.pi.ui.MeetupActivity">
+        <include layout ="@layout/fragment_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dip"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25dp"
+            android:id="@+id/meetupNameTextView"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/meetupImageView"
+            android:layout_below="@id/meetupNameTextView"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            android:textStyle="italic"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/meetupContentTextView"
+            android:layout_below="@+id/meetupImageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="14dp" />
+
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meetupContentTextView"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Time"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/meetupTimeTextView"
+                android:layout_below="@+id/meetupContentTextView"
+                android:layout_weight="0.5"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/locationClick"
+                android:textStyle="italic"
+                android:layout_alignEnd="@+id/meetupPersonNum"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meetup Status:"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/meetupStatusTextView"
+            android:layout_below="@+id/timeLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/categoryLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meetupStatusTextView"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/meetupCategoryTextView"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/meetupStatusTextView"
+                android:layout_weight="0.5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Signup:"
+                android:textSize="18dp"
+                android:id="@+id/meetupPersonNum"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/meetupStatusTextView"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Join"
+            android:textColor="@color/white"
+            android:id="@+id/meetupJoinButton"
+            android:background="@color/blue2"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/categoryLayer"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

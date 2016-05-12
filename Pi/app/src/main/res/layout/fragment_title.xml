@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_title_1"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/title_bg"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/leftTitleButton"
+        style="@style/Text.Title_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/title_btn_back"
+        android:minWidth="60dip"
+        android:text="Home" />
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/Text.Title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="PI" />
+
+    <Button
+        android:id="@+id/rightTitleButton"
+        style="@style/Text.Title_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/title_btn"
+        android:minWidth="70dip"
+        android:text="New" />
+
+</LinearLayout>
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="cmu.rrg.pi.fragment.TitleFragment">-->
+
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="@string/hello_blank_fragment" />-->
+
+<!--</FrameLayout>-->

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue0"
+    tools:context="cmu.rrg.pi.ui.PostNewMeetupActivity">
+
+    <include layout ="@layout/fragment_title"/>
+    <LinearLayout
+        android:paddingTop="50dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameLayer"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Meetup Name:"
+            android:id="@+id/meetupNameView"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/meetUpNameInput"
+            android:singleLine="true"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/meetupNameView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/categoryLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameLayer"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Meetup Category:"
+            android:id="@+id/meetupCategory"/>
+
+        <Spinner android:id="@+id/categorySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/meetupCategory">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationInputLayer"
+        android:layout_below="@+id/categoryLayer"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Address: "
+            android:id="@+id/locationInputView"
+            android:singleLine="true"
+            android:layout_alignParentRight="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationInput"
+            android:singleLine="true"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/meetupNameView" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTimeLayer"
+        android:orientation="horizontal"
+        android:layout_below="@+id/locationInputLayer"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Pick Begin Time"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:id="@+id/beginTimeButton"
+
+            android:onClick="showTimePickerDialog"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="0.04" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Pick End Time"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:id="@+id/endTimeButton"
+            android:layout_alignRight="@+id/beginTimeButton"
+            android:layout_weight="0.04"
+            android:layout_marginRight="2.5dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Get Location"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:id="@+id/locationButton"
+            android:layout_alignRight="@+id/endTimeButton"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.04" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endTimeLayer"
+        android:layout_below="@+id/startTimeLayer"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Begin time:"
+            android:id="@+id/meetUpBeginTimeView"
+            android:singleLine="true"
+            android:layout_alignBaseline="@+id/meetUpContentInput"
+            android:layout_alignBottom="@+id/meetUpContentInput"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.26"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="End time: "
+            android:id="@+id/meetupEndTimeView"
+            android:singleLine="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.26"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/locationView"
+        android:singleLine="true"
+        android:layout_below="@+id/endTimeLayer"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Meetup content:"
+        android:id="@+id/meetUpContentInput"
+        android:layout_below="@+id/locationView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/meetUpContentTextView"
+        android:layout_below="@+id/meetUpContentInput"
+        android:layout_alignParentStart="false"
+        android:maxLines="3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/broadcastPhoto"
+        android:layout_below="@+id/takeBroadcastPhoto" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="Take Broadcast Photo"
+        android:id="@+id/takeBroadcastPhoto"
+        android:textColor="@color/white"
+        android:background="@color/blue4"
+        android:layout_below="@+id/meetUpContentTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="Finish"
+        android:textColor="@color/white"
+        android:background="@color/blue4"
+        android:id="@+id/finishPostMeetUpButton"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
