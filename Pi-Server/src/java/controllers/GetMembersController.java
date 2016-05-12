@@ -17,7 +17,6 @@ import utils.DatabaseIO;
 
 /**
  *
- * @author Yang
  * 
  * get information of a meetup
  */
